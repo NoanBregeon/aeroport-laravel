@@ -3,38 +3,40 @@
 namespace App\Http\Controllers;
 
 use App\Models\Terminal;
-use Illuminate\Contracts\View\Factory;
-use Illuminate\Contracts\View\View;
-use Illuminate\Foundation\Application;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Redirector;
 
 class TerminalController extends Controller
 {
-    public function index(): View|Factory|Application
+    public function __construct()
+    {
+        // Protège toutes les routes du contrôleur
+        $this->middleware('auth');
+    }
+
+    public function index()
     {
         $terminals = Terminal::all();
-
         return view('terminals.index', compact('terminals'));
     }
 
-    public function create(): View|Factory|Application
+    public function create()
     {
         return view('terminals.create');
     }
 
-    public function store(Request $request): RedirectResponse|Redirector
+    public function store(Request $request)
     {
-        $data = $request->validate([
+        $validated = $request->validate([
             'nom' => ['required', 'string', 'max:255'],
-            'code' => ['nullable', 'string', 'max:50', 'unique:terminals,code'],
-            'emplacement' => ['nullable', 'string', 'max:255'],
-            'date_mise_en_service' => ['nullable', 'date'],
+            'code' => ['required', 'string', 'max:10'],
+            'emplacement' => ['required', 'string', 'max:255'],
+            'date_mise_en_service' => ['required', 'date'],
         ]);
 
-        Terminal::create($data);
+        Terminal::create($validated);
 
-        return redirect()->route('terminals.index')->with('status', 'Terminal créé.');
+        return redirect()
+            ->route('terminals.index')
+            ->with('success', 'Terminal créé avec succès.');
     }
 }

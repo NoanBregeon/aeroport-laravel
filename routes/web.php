@@ -1,27 +1,39 @@
 <?php
 
-use App\Http\Controllers\GateController;
-use App\Http\Controllers\HallController;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\TerminalController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TerminalController;
+use App\Http\Controllers\HallController;
+use App\Http\Controllers\GateController;
 
-Route::get('/', [TerminalController::class, 'index'])
-    ->middleware('auth')
-    ->name('home');
+Route::get('/', function () {
+    return redirect()->route('terminals.index');
+})->name('home');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Terminals
+Route::middleware(['auth'])->group(function () {
+    Route::get('/terminals', [TerminalController::class, 'index'])->name('terminals.index');
+    Route::get('/terminals/create', [TerminalController::class, 'create'])->name('terminals.create');
+    Route::post('/terminals', [TerminalController::class, 'store'])->name('terminals.store');
 
-Route::middleware('auth')->group(function () {
-    Route::resource('terminals', TerminalController::class);
-    Route::resource('halls', HallController::class);
-    Route::resource('gates', GateController::class);
+    // Halls
+    Route::get('/halls', [HallController::class, 'index'])->name('halls.index');
+    Route::get('/halls/create', [HallController::class, 'create'])->name('halls.create');
+    Route::post('/halls', [HallController::class, 'store'])->name('halls.store');
 
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    // Gates
+    Route::get('/gates', [GateController::class, 'index'])->name('gates.index');
+    Route::get('/gates/create', [GateController::class, 'create'])->name('gates.create');
+    Route::post('/gates', [GateController::class, 'store'])->name('gates.store');
 });
 
+// On choisit que "le dashboard" = la liste des terminaux
+Route::get('/dashboard', function () {
+    return redirect()->route('terminals.index');
+})->middleware(['auth'])->name('dashboard');
+
+/*
+|--------------------------------------------------------------------------
+| Auth routes (Breeze)
+|--------------------------------------------------------------------------
+*/
 require __DIR__.'/auth.php';

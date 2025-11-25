@@ -8,13 +8,14 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::dropIfExists('halls');
-
-        Schema::create('halls', function (Blueprint $table) {
+        Schema::create('halls', function (Blueprint $table): void {
             $table->id();
-            $table->foreignId('terminal_id')->constrained('terminals')->cascadeOnDelete();
+            $table->foreignId('terminal_id')
+                ->constrained('terminals')
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
             $table->string('nom');
-            $table->integer('personnel_minimum')->default(0);
+            $table->unsignedInteger('personnel_minimum');
             $table->timestamps();
         });
     }

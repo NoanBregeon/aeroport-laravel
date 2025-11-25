@@ -8,15 +8,16 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::dropIfExists('gates');
-
-        Schema::create('gates', function (Blueprint $table) {
+        Schema::create('gates', function (Blueprint $table): void {
             $table->id();
-            $table->foreignId('hall_id')->constrained('halls')->cascadeOnDelete();
+            $table->foreignId('hall_id')
+                ->constrained('halls')
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
             $table->string('nom');
             $table->boolean('ouverte')->default(false);
-            $table->integer('capacite_max')->nullable();
-            $table->integer('capacite')->nullable();
+            $table->unsignedInteger('capacite_max');
+            $table->unsignedInteger('capacite');
             $table->timestamps();
         });
     }

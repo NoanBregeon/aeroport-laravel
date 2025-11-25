@@ -11,9 +11,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->boolean('is_admin')->default(false);
-        });
+        // Vérifier avant d'ajouter pour éviter les erreurs si la colonne existe déjà
+        if (!Schema::hasColumn('users', 'is_admin')) {
+            Schema::table('users', function (Blueprint $table) {
+                $table->boolean('is_admin')->default(false)->after('email_verified_at');
+            });
+        }
     }
 
     /**
@@ -21,8 +24,11 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            //
-        });
+        // Supprimer la colonne uniquement si elle existe
+        if (Schema::hasColumn('users', 'is_admin')) {
+            Schema::table('users', function (Blueprint $table) {
+                $table->dropColumn('is_admin');
+            });
+        }
     }
 };

@@ -4,42 +4,51 @@ namespace App\Http\Controllers;
 
 use App\Models\Gate;
 use App\Models\Hall;
-use Illuminate\Contracts\View\Factory;
-use Illuminate\Contracts\View\View;
-use Illuminate\Foundation\Application;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Redirector;
+use Illuminate\View\View;
 
 class GateController extends Controller
 {
-    public function index(): View|Factory|Application
+    public function __construct()
     {
-        $gates = Gate::with('hall')->get();
-
-        return view('gates.index', compact('gates'));
+        $this->middleware('auth');
     }
 
-    public function create(Request $request): View|Factory|Application
+    /**
+     * Affiche la liste des portes.
+     */
+    public function index(): View
     {
-        $hallId = $request->get('hall');
-        $hall = $hallId ? Hall::findOrFail($hallId) : null;
+        $gates = Gate::with('hall.terminal')->get();
+        $halls = Hall::with('terminal')->get();
 
-        return view('gates.create', compact('hall'));
+        return view('gates.index', [
+            'gates' => $gates,
+            'halls' => $halls,
+        ]);
     }
 
-    public function store(Request $request): RedirectResponse|Redirector
+    /**
+     * Crée une porte.
+     */
+    public function store(Request $request): RedirectResponse
     {
         $data = $request->validate([
-            'hall_id' => ['required', 'exists:halls,id'],
-            'nom' => ['required', 'string', 'max:255'],
-            'ouverte' => ['required', 'boolean'],
-            'capacite_max' => ['nullable', 'integer', 'min:0'],
-            'capacite' => ['nullable', 'integer', 'min:0'],
+            'hall_id'      => ['required', 'exists:halls,id'],
+            'nom'          => ['required', 'string', 'max:255'],
+            'capacite_max' => ['required', 'integer', 'min:0'],
+            'capacite'     => ['required', 'integer', 'min:0'],
+            'ouverte'      => ['nullable', 'boolean'],
         ]);
+
+        // checkbox HTML => "on" => on cast en booléen
+        $data['ouverte'] = $request->boolean('ouverte');
 
         Gate::create($data);
 
-        return redirect()->route('gates.index')->with('status', 'Gate créé.');
+        return redirect()
+            ->route('gates.index')
+            ->with('status', 'Porte créée avec succès.');
     }
 }
