@@ -1,10 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-	<h1>Terminals</h1>
-	<ul>
-		@foreach($terminals as $terminal)
-			<li>{{ $terminal->nom }} ({{ $terminal->code }})</li>
-		@endforeach
-	</ul>
+    <h1>Terminals</h1>
+    <a href="{{ route('terminals.create') }}">Créer</a>
+    <ul>
+        @foreach($terminals as $terminal)
+            <li>
+                {{ $terminal->nom }}
+                @if($terminal->code) ({{ $terminal->code }}) @endif
+                @if($terminal->emplacement) — {{ $terminal->emplacement }} @endif
+            </li>
+        @endforeach
+    </ul>
 @endsection

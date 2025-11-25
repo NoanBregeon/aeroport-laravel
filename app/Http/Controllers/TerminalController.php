@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Terminal;
-use Illuminate\Contracts\View\Factory;
+use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Foundation\Application;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
 
 class TerminalController extends Controller
@@ -28,13 +28,13 @@ class TerminalController extends Controller
     {
         $data = $request->validate([
             'nom' => ['required', 'string', 'max:255'],
-            'code' => ['required', 'string', 'max:20', 'unique:terminals,code'],
+            'code' => ['nullable', 'string', 'max:50', 'unique:terminals,code'],
+            'emplacement' => ['nullable', 'string', 'max:255'],
+            'date_mise_en_service' => ['nullable', 'date'],
         ]);
 
         Terminal::create($data);
 
-        return redirect()
-            ->route('terminals.index')
-            ->with('status', 'Terminal créé avec succès.');
+        return redirect()->route('terminals.index')->with('status', 'Terminal créé.');
     }
 }

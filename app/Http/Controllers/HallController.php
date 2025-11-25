@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Hall;
 use App\Models\Terminal;
-use Illuminate\Contracts\View\Factory;
+use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Foundation\Application;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
 
 class HallController extends Controller
@@ -38,36 +38,6 @@ class HallController extends Controller
 
         Hall::create($data);
 
-        return redirect()
-            ->route('halls.index')
-            ->with('status', 'Hall créé avec succès.');
-    }
-
-    public function edit(Hall $hall): View|Factory|Application
-    {
-        return view('halls.edit', compact('hall'));
-    }
-
-    public function update(Request $request, Hall $hall): RedirectResponse|Redirector
-    {
-        $data = $request->validate([
-            'nom' => ['required', 'string', 'max:255'],
-            'personnel_minimum' => ['required', 'integer', 'min:0'],
-        ]);
-
-        $hall->update($data);
-
-        return redirect()
-            ->route('halls.index')
-            ->with('status', 'Hall mis à jour.');
-    }
-
-    public function destroy(Hall $hall): RedirectResponse|Redirector
-    {
-        $hall->delete();
-
-        return redirect()
-            ->route('halls.index')
-            ->with('status', 'Hall supprimé.');
+        return redirect()->route('halls.index')->with('status', 'Hall créé.');
     }
 }

@@ -10,8 +10,9 @@ use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 /**
  * @property int $id
  * @property string $nom
- * @property string $emplacement
- * @property string $date_mise_en_service
+ * @property string|null $code
+ * @property string|null $emplacement
+ * @property \Illuminate\Support\Carbon|null $date_mise_en_service
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Gate> $gates
@@ -48,7 +49,7 @@ class Terminal extends Model
     ];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany<\App\Models\Hall>
+     * @return HasMany<\App\Models\Hall>
      */
     public function halls(): HasMany
     {
@@ -56,7 +57,7 @@ class Terminal extends Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasManyThrough<\App\Models\Gate, \App\Models\Hall>
+     * @return HasManyThrough<\App\Models\Gate, \App\Models\Hall>
      */
     public function gates(): HasManyThrough
     {

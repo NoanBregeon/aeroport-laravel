@@ -11,22 +11,17 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property int $hall_id
  * @property string $nom
  * @property bool $ouverte
- * @property int $capacite_max
+ * @property int|null $capacite_max
+ * @property int|null $capacite
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ *
  * @property-read \App\Models\Hall|null $hall
  *
  * @method static \Database\Factories\GateFactory factory($count = null, $state = [])
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate query()
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate whereCapaciteMax($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate whereHallId($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate whereNom($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate whereOuverte($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Gate newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Gate newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Gate query()
  *
  * @mixin \Eloquent
  */
@@ -49,7 +44,7 @@ class Gate extends Model
     ];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo<\App\Models\Hall, \App\Models\Gate>
+     * @return BelongsTo<\App\Models\Hall, \App\Models\Gate>
      */
     public function hall(): BelongsTo
     {

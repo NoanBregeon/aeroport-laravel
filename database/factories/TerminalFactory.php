@@ -13,7 +13,9 @@ class TerminalFactory extends Factory
     {
         return [
             'nom' => $this->faker->company(),
-            'code' => strtoupper($this->faker->unique()->bothify('T??')),
+            'code' => strtoupper($this->faker->unique()->bothify('T##')),
+            'emplacement' => $this->faker->city(),
+            'date_mise_en_service' => $this->faker->date(),
         ];
     }
 }
