@@ -22,6 +22,12 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Hall newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Hall newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Hall query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Hall whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Hall whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Hall whereNom($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Hall wherePersonnelMinimum($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Hall whereTerminalId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Hall whereUpdatedAt($value)
  *
  * @mixin \Eloquent
  */

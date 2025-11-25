@@ -8,7 +8,7 @@ return new class extends Migration
 {
     public function up(): void
     {
-        // Assure un état propre : supprime la table si elle existe (utile en tests SQLite ré-exécutés)
+        // Assure un état propre pour les environnements de test
         Schema::dropIfExists('terminals');
 
         Schema::create('terminals', function (Blueprint $table) {

@@ -24,6 +24,7 @@ use Illuminate\Database\Eloquent\Relations\HasManyThrough;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Terminal newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Terminal newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Terminal query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Terminal whereCode($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Terminal whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Terminal whereDateMiseEnService($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Terminal whereEmplacement($value)

@@ -15,13 +15,20 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property int|null $capacite
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- *
  * @property-read \App\Models\Hall|null $hall
  *
  * @method static \Database\Factories\GateFactory factory($count = null, $state = [])
- * @method static \Illuminate\Database\Eloquent\Builder|Gate newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Gate newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Gate query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate whereCapacite($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate whereCapaciteMax($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate whereHallId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate whereNom($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate whereOuverte($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate whereUpdatedAt($value)
  *
  * @mixin \Eloquent
  */
