@@ -10,14 +10,14 @@ class HallController extends Controller
 {
     public function index()
     {
-        $halls = Hall::with('terminal')->orderBy('id', 'DESC')->get();
+        $halls = Hall::with('terminal')->get();
 
         return view('admin.halls.index', compact('halls'));
     }
 
     public function create()
     {
-        $terminals = Terminal::all(); // pour le select
+        $terminals = Terminal::all();
 
         return view('admin.halls.create', compact('terminals'));
     }
@@ -26,15 +26,14 @@ class HallController extends Controller
     {
         $request->validate([
             'terminal_id' => 'required|exists:terminals,id',
-            'nom' => 'required|string|max:255',
-            'type' => 'nullable|string|max:255',
+            'nom' => 'required',
+            'min_personnel' => 'required|integer|min:0',
         ]);
 
         Hall::create($request->all());
 
-        return redirect()
-            ->route('admin.halls.index')
-            ->with('success', 'Hall créé avec succès.');
+        return redirect()->route('admin.halls.index')
+            ->with('success', 'Hall créé.');
     }
 
     public function edit(Hall $hall)
@@ -48,14 +47,13 @@ class HallController extends Controller
     {
         $request->validate([
             'terminal_id' => 'required|exists:terminals,id',
-            'nom' => 'required|string|max:255',
-            'type' => 'nullable|string|max:255',
+            'nom' => 'required',
+            'min_personnel' => 'required|integer|min:0',
         ]);
 
         $hall->update($request->all());
 
-        return redirect()
-            ->route('admin.halls.index')
+        return redirect()->route('admin.halls.index')
             ->with('success', 'Hall mis à jour.');
     }
 
@@ -63,8 +61,7 @@ class HallController extends Controller
     {
         $hall->delete();
 
-        return redirect()
-            ->route('admin.halls.index')
+        return redirect()->route('admin.halls.index')
             ->with('success', 'Hall supprimé.');
     }
 }

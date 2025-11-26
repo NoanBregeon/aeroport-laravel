@@ -2395,6 +2395,26 @@ return [
        'fixedErrorDiff' => NULL,
     )),
   ),
+  'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\Auth\\AuthenticatedSessionController.php' => 
+  array (
+    0 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Access to an undefined property App\\Models\\User::$role.',
+       'file' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\Auth\\AuthenticatedSessionController.php',
+       'line' => 32,
+       'canBeIgnored' => true,
+       'filePath' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\Auth\\AuthenticatedSessionController.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 32,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+  ),
   'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\Auth\\VerifyEmailController.php' => 
   array (
     0 => 
@@ -2470,23 +2490,6 @@ return [
     )),
     3 => 
     \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Relation \'terminal\' is not found in App\\Models\\Hall model.',
-       'file' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\GateController.php',
-       'line' => 20,
-       'canBeIgnored' => true,
-       'filePath' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\GateController.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 20,
-       'nodeType' => 'PhpParser\\Node\\Expr\\StaticCall',
-       'identifier' => 'larastan.relationExistence',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    4 => 
-    \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Method App\\Http\\Controllers\\GateController::store() has no return type specified.',
        'file' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\GateController.php',
        'line' => 25,
@@ -2502,16 +2505,33 @@ return [
       ),
        'fixedErrorDiff' => NULL,
     )),
-    5 => 
+    4 => 
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Method App\\Http\\Controllers\\GateController::edit() has no return type specified.',
        'file' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\GateController.php',
-       'line' => 40,
+       'line' => 44,
        'canBeIgnored' => true,
        'filePath' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\GateController.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 40,
+       'nodeLine' => 44,
+       'nodeType' => 'PHPStan\\Node\\InClassMethodNode',
+       'identifier' => 'missingType.return',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    5 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Method App\\Http\\Controllers\\GateController::update() has no return type specified.',
+       'file' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\GateController.php',
+       'line' => 51,
+       'canBeIgnored' => true,
+       'filePath' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\GateController.php',
+       'traitFilePath' => NULL,
+       'tip' => NULL,
+       'nodeLine' => 51,
        'nodeType' => 'PHPStan\\Node\\InClassMethodNode',
        'identifier' => 'missingType.return',
        'metadata' => 
@@ -2521,31 +2541,14 @@ return [
     )),
     6 => 
     \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Method App\\Http\\Controllers\\GateController::update() has no return type specified.',
-       'file' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\GateController.php',
-       'line' => 47,
-       'canBeIgnored' => true,
-       'filePath' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\GateController.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 47,
-       'nodeType' => 'PHPStan\\Node\\InClassMethodNode',
-       'identifier' => 'missingType.return',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    7 => 
-    \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Method App\\Http\\Controllers\\GateController::destroy() has no return type specified.',
        'file' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\GateController.php',
-       'line' => 62,
+       'line' => 70,
        'canBeIgnored' => true,
        'filePath' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\GateController.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 62,
+       'nodeLine' => 70,
        'nodeType' => 'PHPStan\\Node\\InClassMethodNode',
        'identifier' => 'missingType.return',
        'metadata' => 
@@ -2628,12 +2631,12 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Method App\\Http\\Controllers\\HallController::edit() has no return type specified.',
        'file' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\HallController.php',
-       'line' => 40,
+       'line' => 39,
        'canBeIgnored' => true,
        'filePath' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\HallController.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 40,
+       'nodeLine' => 39,
        'nodeType' => 'PHPStan\\Node\\InClassMethodNode',
        'identifier' => 'missingType.return',
        'metadata' => 
@@ -2645,12 +2648,12 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Method App\\Http\\Controllers\\HallController::update() has no return type specified.',
        'file' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\HallController.php',
-       'line' => 47,
+       'line' => 46,
        'canBeIgnored' => true,
        'filePath' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\HallController.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 47,
+       'nodeLine' => 46,
        'nodeType' => 'PHPStan\\Node\\InClassMethodNode',
        'identifier' => 'missingType.return',
        'metadata' => 
@@ -2662,12 +2665,83 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Method App\\Http\\Controllers\\HallController::destroy() has no return type specified.',
        'file' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\HallController.php',
-       'line' => 62,
+       'line' => 60,
        'canBeIgnored' => true,
        'filePath' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\HallController.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 62,
+       'nodeLine' => 60,
+       'nodeType' => 'PHPStan\\Node\\InClassMethodNode',
+       'identifier' => 'missingType.return',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+  ),
+  'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php' => 
+  array (
+    0 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Method App\\Http\\Controllers\\OperatorController::dashboard() has no return type specified.',
+       'file' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php',
+       'line' => 12,
+       'canBeIgnored' => true,
+       'filePath' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php',
+       'traitFilePath' => NULL,
+       'tip' => NULL,
+       'nodeLine' => 12,
+       'nodeType' => 'PHPStan\\Node\\InClassMethodNode',
+       'identifier' => 'missingType.return',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    1 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Relation \'halls\' is not found in App\\Models\\Terminal model.',
+       'file' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php',
+       'line' => 15,
+       'canBeIgnored' => true,
+       'filePath' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php',
+       'traitFilePath' => NULL,
+       'tip' => NULL,
+       'nodeLine' => 15,
+       'nodeType' => 'PhpParser\\Node\\Expr\\StaticCall',
+       'identifier' => 'larastan.relationExistence',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    2 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Method App\\Http\\Controllers\\OperatorController::toggleGate() has no return type specified.',
+       'file' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php',
+       'line' => 19,
+       'canBeIgnored' => true,
+       'filePath' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php',
+       'traitFilePath' => NULL,
+       'tip' => NULL,
+       'nodeLine' => 19,
+       'nodeType' => 'PHPStan\\Node\\InClassMethodNode',
+       'identifier' => 'missingType.return',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    3 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Method App\\Http\\Controllers\\OperatorController::updateHallPersonnel() has no return type specified.',
+       'file' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php',
+       'line' => 27,
+       'canBeIgnored' => true,
+       'filePath' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php',
+       'traitFilePath' => NULL,
+       'tip' => NULL,
+       'nodeLine' => 27,
        'nodeType' => 'PHPStan\\Node\\InClassMethodNode',
        'identifier' => 'missingType.return',
        'metadata' => 
@@ -2733,12 +2807,12 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Method App\\Http\\Controllers\\TerminalController::edit() has no return type specified.',
        'file' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\TerminalController.php',
-       'line' => 38,
+       'line' => 36,
        'canBeIgnored' => true,
        'filePath' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\TerminalController.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 38,
+       'nodeLine' => 36,
        'nodeType' => 'PHPStan\\Node\\InClassMethodNode',
        'identifier' => 'missingType.return',
        'metadata' => 
@@ -2750,12 +2824,12 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Method App\\Http\\Controllers\\TerminalController::update() has no return type specified.',
        'file' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\TerminalController.php',
-       'line' => 43,
+       'line' => 41,
        'canBeIgnored' => true,
        'filePath' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\TerminalController.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 43,
+       'nodeLine' => 41,
        'nodeType' => 'PHPStan\\Node\\InClassMethodNode',
        'identifier' => 'missingType.return',
        'metadata' => 
@@ -2767,12 +2841,12 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Method App\\Http\\Controllers\\TerminalController::destroy() has no return type specified.',
        'file' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\TerminalController.php',
-       'line' => 59,
+       'line' => 55,
        'canBeIgnored' => true,
        'filePath' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\TerminalController.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 59,
+       'nodeLine' => 55,
        'nodeType' => 'PHPStan\\Node\\InClassMethodNode',
        'identifier' => 'missingType.return',
        'metadata' => 
@@ -2781,36 +2855,19 @@ return [
        'fixedErrorDiff' => NULL,
     )),
   ),
-  'C:\\code\\aeroport-laravel\\app\\Http\\Kernel.php' => 
+  'C:\\code\\aeroport-laravel\\app\\Http\\Middleware\\OperatorMiddleware.php' => 
   array (
     0 => 
     \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Class App\\Http\\Middleware\\Authenticate not found.',
-       'file' => 'C:\\code\\aeroport-laravel\\app\\Http\\Kernel.php',
-       'line' => 25,
+       'message' => 'Method App\\Http\\Middleware\\OperatorMiddleware::handle() has invalid return type App\\Http\\Middleware\\Response.',
+       'file' => 'C:\\code\\aeroport-laravel\\app\\Http\\Middleware\\OperatorMiddleware.php',
+       'line' => 10,
        'canBeIgnored' => true,
-       'filePath' => 'C:\\code\\aeroport-laravel\\app\\Http\\Kernel.php',
+       'filePath' => 'C:\\code\\aeroport-laravel\\app\\Http\\Middleware\\OperatorMiddleware.php',
        'traitFilePath' => NULL,
-       'tip' => 'Learn more at https://phpstan.org/user-guide/discovering-symbols',
-       'nodeLine' => 25,
-       'nodeType' => 'PhpParser\\Node\\Expr\\ClassConstFetch',
-       'identifier' => 'class.notFound',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    1 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Class App\\Http\\Middleware\\RedirectIfAuthenticated not found.',
-       'file' => 'C:\\code\\aeroport-laravel\\app\\Http\\Kernel.php',
-       'line' => 26,
-       'canBeIgnored' => true,
-       'filePath' => 'C:\\code\\aeroport-laravel\\app\\Http\\Kernel.php',
-       'traitFilePath' => NULL,
-       'tip' => 'Learn more at https://phpstan.org/user-guide/discovering-symbols',
-       'nodeLine' => 26,
-       'nodeType' => 'PhpParser\\Node\\Expr\\ClassConstFetch',
+       'tip' => NULL,
+       'nodeLine' => 10,
+       'nodeType' => 'PHPStan\\Node\\InClassMethodNode',
        'identifier' => 'class.notFound',
        'metadata' => 
       array (
@@ -2824,12 +2881,12 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Method App\\Models\\Gate::hall() has no return type specified.',
        'file' => 'C:\\code\\aeroport-laravel\\app\\Models\\Gate.php',
-       'line' => 36,
+       'line' => 41,
        'canBeIgnored' => true,
        'filePath' => 'C:\\code\\aeroport-laravel\\app\\Models\\Gate.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 36,
+       'nodeLine' => 41,
        'nodeType' => 'PHPStan\\Node\\InClassMethodNode',
        'identifier' => 'missingType.return',
        'metadata' => 
@@ -2881,12 +2938,12 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Method App\\Models\\Terminal::halls() has no return type specified.',
        'file' => 'C:\\code\\aeroport-laravel\\app\\Models\\Terminal.php',
-       'line' => 40,
+       'line' => 43,
        'canBeIgnored' => true,
        'filePath' => 'C:\\code\\aeroport-laravel\\app\\Models\\Terminal.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 40,
+       'nodeLine' => 43,
        'nodeType' => 'PHPStan\\Node\\InClassMethodNode',
        'identifier' => 'missingType.return',
        'metadata' => 
@@ -3023,6 +3080,13 @@ return [
       ),
     ),
   ),
+  'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php' => 
+  array (
+    'Larastan\\Larastan\\Collectors\\UsedViewFunctionCollector' => 
+    array (
+      0 => 'operator.dashboard',
+    ),
+  ),
   'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\ProfileController.php' => 
   array (
     'Larastan\\Larastan\\Collectors\\UsedViewFunctionCollector' => 
@@ -3044,7 +3108,7 @@ return [
       array (
         0 => 'Illuminate\\Database\\Eloquent\\Builder',
         1 => 'create',
-        2 => 31,
+        2 => 30,
       ),
     ),
   ),
@@ -3055,7 +3119,18 @@ return [
       0 => 
       array (
         0 => 'abort',
-        1 => 23,
+        1 => 14,
+      ),
+    ),
+  ),
+  'C:\\code\\aeroport-laravel\\app\\Http\\Middleware\\OperatorMiddleware.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\PossiblyPureFuncCallCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'abort',
+        1 => 13,
       ),
     ),
   ),
@@ -3117,6 +3192,12 @@ return [
         1 => 'casts',
         2 => 'App\\Models\\User',
       ),
+      1 => 
+      array (
+        0 => 'App\\Models\\User',
+        1 => 'isAdmin',
+        2 => 'App\\Models\\User',
+      ),
     ),
     'PHPStan\\Rules\\Traits\\TraitUseCollector' => 
     array (
@@ -3145,14 +3226,14 @@ return [
 	'dependencies' => array (
   'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\AdminDashboardController.php' => 
   array (
-    'fileHash' => '45d4f667303e2447e0fcbb0970ffa3c0573842ff',
+    'fileHash' => '5c41abe48f351ce3dfa8ffc3396a67a204896de0',
     'dependentFiles' => 
     array (
     ),
   ),
   'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\Auth\\AuthenticatedSessionController.php' => 
   array (
-    'fileHash' => 'cf83b6bbd07baea2c730f9eaf7e8ad005aa98dcb',
+    'fileHash' => 'c5a6e13012fd60c534222831c5276cf532b6507a',
     'dependentFiles' => 
     array (
     ),
@@ -3230,20 +3311,28 @@ return [
       9 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\Auth\\VerifyEmailController.php',
       10 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\GateController.php',
       11 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\HallController.php',
-      12 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\ProfileController.php',
-      13 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\TerminalController.php',
+      12 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php',
+      13 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\ProfileController.php',
+      14 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\TerminalController.php',
     ),
   ),
   'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\GateController.php' => 
   array (
-    'fileHash' => 'c1f719bae1d89d5a35881aab42dd70f2a1d260a0',
+    'fileHash' => 'fc135d032eba9f28b6cf649fd8ee97a030e5d3cc',
     'dependentFiles' => 
     array (
     ),
   ),
   'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\HallController.php' => 
   array (
-    'fileHash' => '44c177bfba966d376ad5b5db376c3fbd15969334',
+    'fileHash' => '09420a4b4abd00f1345caa681098ab01e8c65508',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
+  'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php' => 
+  array (
+    'fileHash' => '622028d27c6223f00cc22a63098d8478c36d5dc7',
     'dependentFiles' => 
     array (
     ),
@@ -3257,24 +3346,31 @@ return [
   ),
   'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\TerminalController.php' => 
   array (
-    'fileHash' => '2c70f4e30f75583efb0dddf80603a4e2451922ac',
-    'dependentFiles' => 
-    array (
-    ),
-  ),
-  'C:\\code\\aeroport-laravel\\app\\Http\\Kernel.php' => 
-  array (
-    'fileHash' => '4adfa88e3ad9d47f36a8d1c09f18822cd51d7771',
+    'fileHash' => '80071c4c8a7387431e0a70616c2925a2595422d4',
     'dependentFiles' => 
     array (
     ),
   ),
   'C:\\code\\aeroport-laravel\\app\\Http\\Middleware\\AdminMiddleware.php' => 
   array (
-    'fileHash' => '57cf55464b204990a2b34bff7a73c78b39967099',
+    'fileHash' => '9db0e45aca914b694e4df59e4cb41f5966a22b8e',
     'dependentFiles' => 
     array (
       0 => 'C:\\code\\aeroport-laravel\\app\\Http\\Kernel.php',
+    ),
+  ),
+  'C:\\code\\aeroport-laravel\\app\\Http\\Middleware\\OperatorMiddleware.php' => 
+  array (
+    'fileHash' => '8493250eb40a697550480abda1ed227ac5183452',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
+  'C:\\code\\aeroport-laravel\\app\\Http\\Middleware\\SetLocaleFromUser.php' => 
+  array (
+    'fileHash' => '4ef67bc278867d122a3ba7217a9350ef9d8ca184',
+    'dependentFiles' => 
+    array (
     ),
   ),
   'C:\\code\\aeroport-laravel\\app\\Http\\Requests\\Auth\\LoginRequest.php' => 
@@ -3295,57 +3391,62 @@ return [
   ),
   'C:\\code\\aeroport-laravel\\app\\Models\\Gate.php' => 
   array (
-    'fileHash' => 'f390e8639a3ef8e9dc7aa4b9f48e8d6da471f8bf',
+    'fileHash' => '61b0d9b7aeb3a3d6ed602fc10df3b6816e18f16e',
     'dependentFiles' => 
     array (
       0 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\AdminDashboardController.php',
       1 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\GateController.php',
       2 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\HallController.php',
-      3 => 'C:\\code\\aeroport-laravel\\app\\Models\\Hall.php',
-      4 => 'C:\\code\\aeroport-laravel\\app\\Models\\Terminal.php',
+      3 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php',
+      4 => 'C:\\code\\aeroport-laravel\\app\\Models\\Hall.php',
+      5 => 'C:\\code\\aeroport-laravel\\app\\Models\\Terminal.php',
     ),
   ),
   'C:\\code\\aeroport-laravel\\app\\Models\\Hall.php' => 
   array (
-    'fileHash' => 'c1228d5b8d308ddd3a51c4ce26b831af0e7afaba',
+    'fileHash' => '359dc2bab202e274574d9fe8fde23c9ebc4210d4',
     'dependentFiles' => 
     array (
       0 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\AdminDashboardController.php',
       1 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\GateController.php',
       2 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\HallController.php',
-      3 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\TerminalController.php',
-      4 => 'C:\\code\\aeroport-laravel\\app\\Models\\Gate.php',
-      5 => 'C:\\code\\aeroport-laravel\\app\\Models\\Terminal.php',
+      3 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php',
+      4 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\TerminalController.php',
+      5 => 'C:\\code\\aeroport-laravel\\app\\Models\\Gate.php',
+      6 => 'C:\\code\\aeroport-laravel\\app\\Models\\Terminal.php',
     ),
   ),
   'C:\\code\\aeroport-laravel\\app\\Models\\Terminal.php' => 
   array (
-    'fileHash' => '451a9f7aaba0a65a72c1ccb31b883cecda770c7d',
+    'fileHash' => '3ba236cacb8d57665a5c6e2121cb60576ffe873f',
     'dependentFiles' => 
     array (
       0 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\AdminDashboardController.php',
       1 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\GateController.php',
       2 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\HallController.php',
-      3 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\TerminalController.php',
-      4 => 'C:\\code\\aeroport-laravel\\app\\Models\\Gate.php',
-      5 => 'C:\\code\\aeroport-laravel\\app\\Models\\Hall.php',
+      3 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php',
+      4 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\TerminalController.php',
+      5 => 'C:\\code\\aeroport-laravel\\app\\Models\\Gate.php',
+      6 => 'C:\\code\\aeroport-laravel\\app\\Models\\Hall.php',
     ),
   ),
   'C:\\code\\aeroport-laravel\\app\\Models\\User.php' => 
   array (
-    'fileHash' => 'd3521974e6028cd293178e8e7510aede2c6115fb',
+    'fileHash' => '858f6fbf1486658c3b1e844ad341c28a9c4db3d9',
     'dependentFiles' => 
     array (
-      0 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\Auth\\ConfirmablePasswordController.php',
-      1 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\Auth\\EmailVerificationNotificationController.php',
-      2 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\Auth\\EmailVerificationPromptController.php',
-      3 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\Auth\\NewPasswordController.php',
-      4 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\Auth\\PasswordController.php',
-      5 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\Auth\\RegisteredUserController.php',
-      6 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\Auth\\VerifyEmailController.php',
-      7 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\ProfileController.php',
-      8 => 'C:\\code\\aeroport-laravel\\app\\Http\\Middleware\\AdminMiddleware.php',
-      9 => 'C:\\code\\aeroport-laravel\\app\\Http\\Requests\\ProfileUpdateRequest.php',
+      0 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\Auth\\AuthenticatedSessionController.php',
+      1 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\Auth\\ConfirmablePasswordController.php',
+      2 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\Auth\\EmailVerificationNotificationController.php',
+      3 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\Auth\\EmailVerificationPromptController.php',
+      4 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\Auth\\NewPasswordController.php',
+      5 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\Auth\\PasswordController.php',
+      6 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\Auth\\RegisteredUserController.php',
+      7 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\Auth\\VerifyEmailController.php',
+      8 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\ProfileController.php',
+      9 => 'C:\\code\\aeroport-laravel\\app\\Http\\Middleware\\AdminMiddleware.php',
+      10 => 'C:\\code\\aeroport-laravel\\app\\Http\\Middleware\\OperatorMiddleware.php',
+      11 => 'C:\\code\\aeroport-laravel\\app\\Http\\Requests\\ProfileUpdateRequest.php',
     ),
   ),
   'C:\\code\\aeroport-laravel\\app\\Providers\\AppServiceProvider.php' => 
@@ -4724,6 +4825,119 @@ return [
       ),
     )),
   ),
+  'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Http\\Controllers\\OperatorController',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'App\\Http\\Controllers\\Controller',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'dashboard',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'toggleGate',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'gate',
+               'type' => 'App\\Models\\Gate',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'updateHallPersonnel',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'request',
+               'type' => 'Illuminate\\Http\\Request',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'hall',
+               'type' => 'App\\Models\\Hall',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
   'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\ProfileController.php' => 
   array (
     0 => 
@@ -5080,110 +5294,6 @@ return [
       ),
     )),
   ),
-  'C:\\code\\aeroport-laravel\\app\\Http\\Kernel.php' => 
-  array (
-    0 => 
-    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
-       'name' => 'App\\Http\\Kernel',
-       'phpDoc' => NULL,
-       'abstract' => false,
-       'final' => false,
-       'extends' => 'Illuminate\\Foundation\\Http\\Kernel',
-       'implements' => 
-      array (
-      ),
-       'usedTraits' => 
-      array (
-      ),
-       'traitUseAdaptations' => 
-      array (
-      ),
-       'statements' => 
-      array (
-        0 => 
-        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
-           'names' => 
-          array (
-            0 => 'middleware',
-          ),
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * Global HTTP middleware stack.
-     * Applies to *every* request.
-     */',
-             'namespace' => 'App\\Http',
-             'uses' => 
-            array (
-              'httpkernel' => 'Illuminate\\Foundation\\Http\\Kernel',
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
-           'type' => NULL,
-           'public' => false,
-           'private' => false,
-           'static' => false,
-           'readonly' => false,
-           'abstract' => false,
-           'final' => false,
-           'publicSet' => false,
-           'protectedSet' => false,
-           'privateSet' => false,
-           'virtual' => false,
-           'attributes' => 
-          array (
-          ),
-           'hooks' => 
-          array (
-          ),
-        )),
-        1 => 
-        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
-           'names' => 
-          array (
-            0 => 'middlewareAliases',
-          ),
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * Route Middleware Aliases
-     * Allows usage like ->middleware(\'admin\')
-     */',
-             'namespace' => 'App\\Http',
-             'uses' => 
-            array (
-              'httpkernel' => 'Illuminate\\Foundation\\Http\\Kernel',
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
-           'type' => NULL,
-           'public' => false,
-           'private' => false,
-           'static' => false,
-           'readonly' => false,
-           'abstract' => false,
-           'final' => false,
-           'publicSet' => false,
-           'protectedSet' => false,
-           'privateSet' => false,
-           'virtual' => false,
-           'attributes' => 
-          array (
-          ),
-           'hooks' => 
-          array (
-          ),
-        )),
-      ),
-       'attributes' => 
-      array (
-      ),
-    )),
-  ),
   'C:\\code\\aeroport-laravel\\app\\Http\\Middleware\\AdminMiddleware.php' => 
   array (
     0 => 
@@ -5207,16 +5317,151 @@ return [
         0 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'handle',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'Symfony\\Component\\HttpFoundation\\Response',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'request',
+               'type' => 'Illuminate\\Http\\Request',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'next',
+               'type' => 'Closure',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  'C:\\code\\aeroport-laravel\\app\\Http\\Middleware\\OperatorMiddleware.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Http\\Middleware\\OperatorMiddleware',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'handle',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'App\\Http\\Middleware\\Response',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'request',
+               'type' => 'Illuminate\\Http\\Request',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'next',
+               'type' => 'Closure',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  'C:\\code\\aeroport-laravel\\app\\Http\\Middleware\\SetLocaleFromUser.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Http\\Middleware\\SetLocaleFromUser',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'handle',
            'phpDoc' => 
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
      * Handle an incoming request.
+     *
+     * @param  \\Closure(\\Illuminate\\Http\\Request): (\\Symfony\\Component\\HttpFoundation\\Response)  $next
      */',
              'namespace' => 'App\\Http\\Middleware',
              'uses' => 
             array (
               'closure' => 'Closure',
               'request' => 'Illuminate\\Http\\Request',
+              'app' => 'Illuminate\\Support\\Facades\\App',
               'response' => 'Symfony\\Component\\HttpFoundation\\Response',
             ),
              'constUses' => 
@@ -5615,6 +5860,31 @@ return [
           ),
         )),
         1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'casts',
+          ),
+           'phpDoc' => NULL,
+           'type' => NULL,
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'abstract' => false,
+           'final' => false,
+           'publicSet' => false,
+           'protectedSet' => false,
+           'privateSet' => false,
+           'virtual' => false,
+           'attributes' => 
+          array (
+          ),
+           'hooks' => 
+          array (
+          ),
+        )),
+        2 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'hall',
            'phpDoc' => NULL,
@@ -5770,7 +6040,7 @@ return [
  * @property string $nom
  * @property string $code
  * @property string|null $emplacement
- * @property string|null $date_mise_en_service
+ * @property \\Illuminate\\Support\\Carbon|null $date_mise_en_service
  * @property \\Illuminate\\Support\\Carbon|null $created_at
  * @property \\Illuminate\\Support\\Carbon|null $updated_at
  * @property-read \\Illuminate\\Database\\Eloquent\\Collection<int, \\App\\Models\\Hall> $halls
@@ -5838,6 +6108,31 @@ return [
           ),
         )),
         1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'casts',
+          ),
+           'phpDoc' => NULL,
+           'type' => NULL,
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'abstract' => false,
+           'final' => false,
+           'publicSet' => false,
+           'protectedSet' => false,
+           'privateSet' => false,
+           'virtual' => false,
+           'attributes' => 
+          array (
+          ),
+           'hooks' => 
+          array (
+          ),
+        )),
+        2 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'halls',
            'phpDoc' => NULL,
@@ -6036,6 +6331,24 @@ return [
            'final' => false,
            'static' => false,
            'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'isAdmin',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
            'parameters' => 
           array (
           ),

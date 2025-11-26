@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $nom
  * @property string $code
  * @property string|null $emplacement
- * @property string|null $date_mise_en_service
+ * @property \Illuminate\Support\Carbon|null $date_mise_en_service
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Hall> $halls
@@ -32,9 +32,12 @@ class Terminal extends Model
 {
     protected $fillable = [
         'nom',
-        'code',
         'emplacement',
         'date_mise_en_service',
+    ];
+
+    protected $casts = [
+        'date_mise_en_service' => 'date',
     ];
 
     public function halls()

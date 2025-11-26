@@ -10,7 +10,7 @@ class GateController extends Controller
 {
     public function index()
     {
-        $gates = Gate::with('hall')->paginate(10);
+        $gates = Gate::with('hall.terminal')->paginate(10);
 
         return view('admin.gates.index', compact('gates'));
     }
@@ -18,45 +18,53 @@ class GateController extends Controller
     public function create()
     {
         $halls = Hall::all();
+
         return view('admin.gates.create', compact('halls'));
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            'numero' => 'required|string|max:10|unique:gates,numero',
             'hall_id' => 'required|exists:halls,id',
+            'nom' => 'required',
+            'capacite_max' => 'required|integer|min:1',
         ]);
 
         Gate::create([
-            'numero' => $request->numero,
             'hall_id' => $request->hall_id,
+            'nom' => $request->nom,
+            'capacite_max' => $request->capacite_max,
+            'is_open' => $request->boolean('is_open'),
         ]);
 
         return redirect()->route('admin.gates.index')
-            ->with('success', 'Gate créé avec succès.');
+            ->with('success', 'Gate créée.');
     }
 
     public function edit(Gate $gate)
     {
         $halls = Hall::all();
+
         return view('admin.gates.edit', compact('gate', 'halls'));
     }
 
     public function update(Request $request, Gate $gate)
     {
         $request->validate([
-            'numero' => 'required|string|max:10|unique:gates,numero,' . $gate->id,
             'hall_id' => 'required|exists:halls,id',
+            'nom' => 'required',
+            'capacite_max' => 'required|integer|min:1',
         ]);
 
         $gate->update([
-            'numero' => $request->numero,
             'hall_id' => $request->hall_id,
+            'nom' => $request->nom,
+            'capacite_max' => $request->capacite_max,
+            'is_open' => $request->boolean('is_open'),
         ]);
 
         return redirect()->route('admin.gates.index')
-            ->with('success', 'Gate mis à jour avec succès.');
+            ->with('success', 'Gate mise à jour.');
     }
 
     public function destroy(Gate $gate)
@@ -64,6 +72,6 @@ class GateController extends Controller
         $gate->delete();
 
         return redirect()->route('admin.gates.index')
-            ->with('success', 'Gate supprimé.');
+            ->with('success', 'Gate supprimée.');
     }
 }

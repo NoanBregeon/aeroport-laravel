@@ -29,13 +29,17 @@ class Gate extends Model
 {
     protected $fillable = [
         'hall_id',
-        'numero',
-        'status',
+        'nom',
+        'is_open',
+        'capacite_max',
+    ];
+
+    protected $casts = [
+        'is_open' => 'boolean',
     ];
 
     public function hall()
     {
         return $this->belongsTo(Hall::class);
     }
-
 }

@@ -9,7 +9,7 @@ class TerminalController extends Controller
 {
     public function index()
     {
-        $terminals = Terminal::orderBy('id', 'DESC')->get();
+        $terminals = Terminal::withCount('halls')->get();
 
         return view('admin.terminals.index', compact('terminals'));
     }
@@ -22,16 +22,14 @@ class TerminalController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nom' => 'required|string|max:255',
-            'code' => 'required|string|max:10|unique:terminals,code',
-            'emplacement' => 'nullable|string|max:255',
-            'date_mise_en_service' => 'nullable|date',
+            'nom' => 'required',
+            'emplacement' => 'required',
+            'date_mise_en_service' => 'required|date',
         ]);
 
         Terminal::create($request->all());
 
-        return redirect()
-            ->route('admin.terminals.index')
+        return redirect()->route('admin.terminals.index')
             ->with('success', 'Terminal créé avec succès.');
     }
 
@@ -43,16 +41,14 @@ class TerminalController extends Controller
     public function update(Request $request, Terminal $terminal)
     {
         $request->validate([
-            'nom' => 'required|string|max:255',
-            'code' => 'required|string|max:10|unique:terminals,code,'.$terminal->id,
-            'emplacement' => 'nullable|string|max:255',
-            'date_mise_en_service' => 'nullable|date',
+            'nom' => 'required',
+            'emplacement' => 'required',
+            'date_mise_en_service' => 'required|date',
         ]);
 
         $terminal->update($request->all());
 
-        return redirect()
-            ->route('admin.terminals.index')
+        return redirect()->route('admin.terminals.index')
             ->with('success', 'Terminal mis à jour.');
     }
 
@@ -60,8 +56,7 @@ class TerminalController extends Controller
     {
         $terminal->delete();
 
-        return redirect()
-            ->route('admin.terminals.index')
+        return redirect()->route('admin.terminals.index')
             ->with('success', 'Terminal supprimé.');
     }
 }

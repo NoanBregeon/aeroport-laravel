@@ -32,7 +32,7 @@ class Hall extends Model
     protected $fillable = [
         'terminal_id',
         'nom',
-        'type',
+        'min_personnel',
     ];
 
     public function terminal()
@@ -44,5 +44,4 @@ class Hall extends Model
     {
         return $this->hasMany(Gate::class);
     }
-
 }

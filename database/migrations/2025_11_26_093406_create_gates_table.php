@@ -6,23 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('gates', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('hall_id')->constrained()->onDelete('cascade');
-            $table->string('numero')->unique();
-            $table->string('status')->default('Ouverte'); // Ouverte / Fermée
+            $table->foreignId('hall_id')->constrained()->cascadeOnDelete();
+            $table->string('nom');
+            $table->boolean('is_open')->default(false);
+            $table->integer('capacite_max');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('gates');

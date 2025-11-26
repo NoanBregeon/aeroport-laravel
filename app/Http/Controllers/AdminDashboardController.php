@@ -10,12 +10,10 @@ class AdminDashboardController extends Controller
 {
     public function index()
     {
-        $stats = [
-            'terminaux' => Terminal::count(),
-            'halls'     => Hall::count(),
-            'gates'     => Gate::count(),
-        ];
-
-        return view('admin.dashboard', compact('stats'));
+        return view('admin.dashboard', [
+            'terminalsCount' => Terminal::count(),
+            'hallsCount'     => Hall::count(),
+            'gatesCount'     => Gate::count(),
+        ]);
     }
 }

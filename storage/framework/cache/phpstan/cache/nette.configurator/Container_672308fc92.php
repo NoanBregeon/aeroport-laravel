@@ -8,7 +8,7 @@
 
 declare(strict_types=1);
 
-class Container_3028227550 extends _PHPStan_e870ac104\Nette\DI\Container
+class Container_672308fc92 extends _PHPStan_e870ac104\Nette\DI\Container
 {
 	protected $tags = [
 		'phpstan.broker.dynamicMethodReturnTypeExtension' => [
@@ -5096,7 +5096,7 @@ class Container_3028227550 extends _PHPStan_e870ac104\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_3028227550 $container)
+			public function __construct(Container_672308fc92 $container)
 			{
 				$this->container = $container;
 			}
@@ -5116,7 +5116,7 @@ class Container_3028227550 extends _PHPStan_e870ac104\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_3028227550 $container)
+			public function __construct(Container_672308fc92 $container)
 			{
 				$this->container = $container;
 			}
@@ -5139,7 +5139,7 @@ class Container_3028227550 extends _PHPStan_e870ac104\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_3028227550 $container)
+			public function __construct(Container_672308fc92 $container)
 			{
 				$this->container = $container;
 			}
@@ -5159,7 +5159,7 @@ class Container_3028227550 extends _PHPStan_e870ac104\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_3028227550 $container)
+			public function __construct(Container_672308fc92 $container)
 			{
 				$this->container = $container;
 			}
@@ -5224,7 +5224,7 @@ class Container_3028227550 extends _PHPStan_e870ac104\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_3028227550 $container)
+			public function __construct(Container_672308fc92 $container)
 			{
 				$this->container = $container;
 			}
@@ -5282,7 +5282,7 @@ class Container_3028227550 extends _PHPStan_e870ac104\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_3028227550 $container)
+			public function __construct(Container_672308fc92 $container)
 			{
 				$this->container = $container;
 			}
@@ -5340,7 +5340,7 @@ class Container_3028227550 extends _PHPStan_e870ac104\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_3028227550 $container)
+			public function __construct(Container_672308fc92 $container)
 			{
 				$this->container = $container;
 			}
@@ -8540,7 +8540,7 @@ class Container_3028227550 extends _PHPStan_e870ac104\Nette\DI\Container
 	}
 
 
-	public function createServiceContainer(): Container_3028227550
+	public function createServiceContainer(): Container_672308fc92
 	{
 		return $this;
 	}
@@ -9184,75 +9184,33 @@ class Container_3028227550 extends _PHPStan_e870ac104\Nette\DI\Container
 				'ACSetupSvcPort' => '23210',
 				'ALLUSERSPROFILE' => 'C:\ProgramData',
 				'APPDATA' => 'C:\Users\Fury\AppData\Roaming',
-				'APP_DEBUG' => 'true',
-				'APP_ENV' => 'local',
-				'APP_FAKER_LOCALE' => 'en_US',
-				'APP_FALLBACK_LOCALE' => 'en',
-				'APP_KEY' => 'base64:DAya6dDYqMUpo8L80pXVApPf66AsTdAMjJAJQtUkIOo=',
-				'APP_LOCALE' => 'en',
-				'APP_MAINTENANCE_DRIVER' => 'file',
-				'APP_NAME' => 'Laravel',
-				'APP_TIMEZONE' => 'UTC',
-				'APP_URL' => 'http://localhost',
-				'AWS_ACCESS_KEY_ID' => '',
-				'AWS_BUCKET' => '',
-				'AWS_DEFAULT_REGION' => 'us-east-1',
-				'AWS_SECRET_ACCESS_KEY' => '',
-				'AWS_USE_PATH_STYLE_ENDPOINT' => 'false',
-				'BCRYPT_ROUNDS' => '12',
-				'BROADCAST_CONNECTION' => 'log',
-				'CACHE_PREFIX' => '',
-				'CACHE_STORE' => 'database',
-				'CHROME_CRASHPAD_PIPE_NAME' => '\\\.\pipe\crashpad_23668_OUQFXVXWJVGSVFXX',
-				'COLUMNS' => '86',
+				'COLUMNS' => '120',
 				'CommonProgramFiles' => 'C:\Program Files\Common Files',
 				'CommonProgramFiles(x86)' => 'C:\Program Files (x86)\Common Files',
 				'CommonProgramW6432' => 'C:\Program Files\Common Files',
 				'COMPUTERNAME' => 'FURYPORTABLE',
 				'ComSpec' => 'C:\WINDOWS\system32\cmd.exe',
-				'DB_CONNECTION' => 'mysql',
-				'DB_DATABASE' => 'aeroport_laravel',
-				'DB_HOST' => '127.0.0.1',
-				'DB_PASSWORD' => '',
-				'DB_PORT' => '3306',
-				'DB_USERNAME' => 'root',
 				'DriverData' => 'C:\Windows\System32\Drivers\DriverData',
 				'EFC_10036_1262719628' => '1',
 				'EFC_10036_1592913036' => '1',
 				'EFC_10036_2283032206' => '1',
 				'EFC_10036_3789132940' => '1',
-				'FILESYSTEM_DISK' => 'local',
 				'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer',
 				'FPS_BROWSER_USER_PROFILE_STRING' => 'Default',
 				'HOMEDRIVE' => 'C:',
 				'HOMEPATH' => '\Users\Fury',
 				'IGCCSVC_DB' => 'AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcSA9kijCH0Slnbn3rZmULwQAAAACAAAAAAAQZgAAAAEAACAAAACiak3KhXY4Xb3nilIeiSAli1/JrmeHvkkpG+42Yz0A5gAAAAAOgAAAAAIAACAAAACC7UTjCEv94yMWM37mfeXi/rPP6XQVxTDTR5IS3tkl/GAAAADrGVG2EXA4H7N80EWuG6vvkaKg0BdC7P51srzFvHOVQRF5P7Krcesx3EB34GdJrOtPKZ5x9nV6W0PlTe2gMFGBqz/I8PtzJx0UhJ3ro1LhOdimBbmOwIt7CWn5tsyqAfdAAAAAcY5tjuyIbqjYbGIsLSppGyDwnbGJYcfaFgxREAM3M00c+MzTA08eWj/x4EiCgOr+WMSMBQ1gXTy/VJS4wdWNpQ==',
-				'LINES' => '29',
+				'LINES' => '30',
 				'LOCALAPPDATA' => 'C:\Users\Fury\AppData\Local',
-				'LOCAL_GIT_DIRECTORY' => 'C:\Users\Fury\AppData\Local\GitHubDesktop\app-3.5.4\resources\app\git',
 				'LOGONSERVER' => '\\\FURYPORTABLE',
-				'LOG_CHANNEL' => 'stack',
-				'LOG_DEPRECATIONS_CHANNEL' => 'null',
-				'LOG_LEVEL' => 'debug',
-				'MAIL_ENCRYPTION' => 'null',
-				'MAIL_FROM_ADDRESS' => 'hello@example.com',
-				'MAIL_FROM_NAME' => '',
-				'MAIL_HOST' => '127.0.0.1',
-				'MAIL_MAILER' => 'log',
-				'MAIL_PASSWORD' => 'null',
-				'MAIL_PORT' => '2525',
-				'MAIL_USERNAME' => 'null',
-				'MEMCACHED_HOST' => '127.0.0.1',
 				'NUMBER_OF_PROCESSORS' => '16',
 				'NVM_HOME' => 'C:\Users\Fury\.config\herd\bin\nvm',
 				'NVM_SYMLINK' => 'C:\Program Files\nodejs',
-				'ORIGINAL_XDG_CURRENT_DESKTOP' => 'undefined',
 				'OS' => 'Windows_NT',
-				'Path' => 'C:\Program Files\PowerShell\7;c:\Users\Fury\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\Fury\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\WINDOWS\AtlasModules;C:\WINDOWS\AtlasModules\Tools;C:\WINDOWS\AtlasModules\Scripts;C:\Program Files\NVIDIA Corporation\NVIDIA App\NvDLISR;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Users\Fury\.config\herd\bin\nvm;C:\Program Files\nodejs;C:\Program Files\nodejs\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\PowerShell\7-preview\preview;C:\Program Files\PowerShell\7\;C:\Users\Fury\.config\herd\bin;C:\Users\Fury\AppData\Local\Microsoft\WindowsApps;C:\Users\Fury\AppData\Local\GitHubDesktop\bin;C:\Users\Fury\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Fury\AppData\Roaming\npm;C:\Users\Fury\.dotnet\tools;C:\Users\Fury\AppData\Local\Microsoft\WinGet\Packages\Typst.Typst_Microsoft.Winget.Source_8wekyb3d8bbwe\typst-x86_64-pc-windows-msvc;;C:\Program Files (x86)\Steam\steamapps\common\DSX\Main_v3_Beta\;C:\Program Files (x86)\Steam\steamapps\common\DSX\Main_v3_Beta\Console',
+				'Path' => 'C:\Program Files\PowerShell\7;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\WINDOWS\AtlasModules;C:\WINDOWS\AtlasModules\Tools;C:\WINDOWS\AtlasModules\Scripts;C:\Program Files\NVIDIA Corporation\NVIDIA App\NvDLISR;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Users\Fury\.config\herd\bin\nvm;C:\Program Files\nodejs;C:\Program Files\nodejs\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\PowerShell\7-preview\preview;C:\Program Files\PowerShell\7\;C:\Users\Fury\.config\herd\bin;C:\Users\Fury\AppData\Local\Microsoft\WindowsApps;C:\Users\Fury\AppData\Local\GitHubDesktop\bin;C:\Users\Fury\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Fury\AppData\Roaming\npm;C:\Users\Fury\.dotnet\tools;C:\Users\Fury\AppData\Local\Microsoft\WinGet\Packages\Typst.Typst_Microsoft.Winget.Source_8wekyb3d8bbwe\typst-x86_64-pc-windows-msvc;;C:\Program Files (x86)\Steam\steamapps\common\DSX\Main_v3_Beta\;C:\Program Files (x86)\Steam\steamapps\common\DSX\Main_v3_Beta\Console',
 				'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL',
-				'PHPRC' => 'C:\Users\Fury\AppData\Local\Temp\i0r8A53.tmp',
+				'PHPRC' => 'C:\Users\Fury\AppData\Local\Temp\sgsD70B.tmp',
 				'PHPSTAN_ORIGINAL_INIS' => 'C:\Users\Fury\.config\herd\bin\php84\php.ini',
-				'PHP_CLI_SERVER_WORKERS' => '4',
 				'PHP_INI_SCAN_DIR' => '',
 				'POWERSHELL_DISTRIBUTION_CHANNEL' => 'MSI:Windows 10 Pro',
 				'PROCESSOR_ARCHITECTURE' => 'AMD64',
@@ -9266,18 +9224,8 @@ class Container_3028227550 extends _PHPStan_e870ac104\Nette\DI\Container
 				'PROMPT' => '$P$G',
 				'PSModulePath' => 'C:\Users\Fury\Documents\PowerShell\Modules;C:\Program Files\PowerShell\Modules;c:\program files\powershell\7\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules',
 				'PUBLIC' => 'C:\Users\Public',
-				'QUEUE_CONNECTION' => 'database',
-				'REDIS_CLIENT' => 'phpredis',
-				'REDIS_HOST' => '127.0.0.1',
-				'REDIS_PASSWORD' => 'null',
-				'REDIS_PORT' => '6379',
 				'RlsSvcPort' => '22112',
 				'SESSIONNAME' => 'Console',
-				'SESSION_DOMAIN' => 'null',
-				'SESSION_DRIVER' => 'database',
-				'SESSION_ENCRYPT' => 'false',
-				'SESSION_LIFETIME' => '120',
-				'SESSION_PATH' => '/',
 				'SHELL_VERBOSITY' => '0',
 				'SystemDrive' => 'C:',
 				'SystemRoot' => 'C:\WINDOWS',
@@ -9287,23 +9235,9 @@ class Container_3028227550 extends _PHPStan_e870ac104\Nette\DI\Container
 				'USERDOMAIN_ROAMINGPROFILE' => 'FURYPORTABLE',
 				'USERNAME' => 'Fury',
 				'USERPROFILE' => 'C:\Users\Fury',
-				'VITE_APP_NAME' => '',
-				'VSCODE_PYTHON_AUTOACTIVATE_GUARD' => '1',
 				'windir' => 'C:\WINDOWS',
-				'XDEBUG_HANDLER_SETTINGS' => 'C:\Users\Fury\AppData\Local\Temp\i0r8A53.tmp|0|*|*|C:\Users\Fury\.config\herd\bin\php84\php.ini|3.4.7',
+				'XDEBUG_HANDLER_SETTINGS' => 'C:\Users\Fury\AppData\Local\Temp\sgsD70B.tmp|0|*|*|C:\Users\Fury\.config\herd\bin\php84\php.ini|3.4.7',
 				'ZES_ENABLE_SYSMAN' => '1',
-				'TERM_PROGRAM' => 'vscode',
-				'TERM_PROGRAM_VERSION' => '1.106.2',
-				'LANG' => 'fr_FR.UTF-8',
-				'COLORTERM' => 'truecolor',
-				'GIT_ASKPASS' => 'c:\Users\Fury\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass.sh',
-				'VSCODE_GIT_ASKPASS_NODE' => 'C:\Users\Fury\AppData\Local\Programs\Microsoft VS Code\code.exe',
-				'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => '',
-				'VSCODE_GIT_ASKPASS_MAIN' => 'c:\Users\Fury\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass-main.js',
-				'VSCODE_GIT_IPC_HANDLE' => '\\\.\pipe\vscode-git-b04d06c905-sock',
-				'PYTHONSTARTUP' => 'c:\Users\Fury\AppData\Roaming\Code\User\workspaceStorage\ebaf04e6a615e37738b7ae7b35ea49e1\ms-python.python\pythonrc.py',
-				'PYTHON_BASIC_REPL' => '1',
-				'VSCODE_INJECTION' => '1',
 			],
 		];
 	}

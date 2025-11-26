@@ -1,82 +1,114 @@
 <?php
 
+use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\GateController;
 use App\Http\Controllers\HallController;
+use App\Http\Controllers\OperatorController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TerminalController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Routes publiques
-|--------------------------------------------------------------------------
-*/
-
+// ---------------------------------------------------
+// Page publique
+// ---------------------------------------------------
 Route::get('/', function () {
-    return redirect()->route('dashboard');
+    return auth()->check()
+        ? redirect()->route('dashboard')
+        : redirect()->route('login');
 });
 
-/*
-|--------------------------------------------------------------------------
-| Dashboard utilisateur
-|--------------------------------------------------------------------------
-*/
-
+// ---------------------------------------------------
+// Dashboard utilisateur connecté
+// ---------------------------------------------------
 Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+    $user = auth()->user();
 
-/*
-|--------------------------------------------------------------------------
-| Profil utilisateur
-|--------------------------------------------------------------------------
-*/
+    if (! $user) {
+        return redirect()->route('login');
+    }
 
+    return $user->is_admin
+        ? redirect()->route('admin.dashboard')
+        : redirect()->route('operator.dashboard');
+
+})->middleware(['auth'])->name('dashboard');
+
+// ---------------------------------------------------
+// Switch de langue
+// ---------------------------------------------------
+Route::post('/lang', function () {
+
+    $locale = request('locale');
+
+    if (! in_array($locale, ['fr', 'en'])) {
+        abort(400, 'Langue non supportée');
+    }
+
+    session(['locale' => $locale]);
+
+    if (auth()->check()) {
+        auth()->user()->update(['locale' => $locale]);
+    }
+
+    return back();
+
+})->name('lang.switch');
+
+// ---------------------------------------------------
+// Routes du PROFIL (fix réel du bug "profile.edit")
+// ---------------------------------------------------
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::get('/profile', [ProfileController::class, 'edit'])
+        ->name('profile.edit');
+
+    Route::patch('/profile', [ProfileController::class, 'update'])
+        ->name('profile.update');
+
+    Route::delete('/profile', [ProfileController::class, 'destroy'])
+        ->name('profile.destroy');
 });
 
-/*
-|--------------------------------------------------------------------------
-| Espace Administrateur
-|--------------------------------------------------------------------------
-*/
-
+// ---------------------------------------------------
+// ADMIN AREA
+// ---------------------------------------------------
 Route::middleware(['auth', 'admin'])
     ->prefix('admin')
     ->name('admin.')
     ->group(function () {
 
-        Route::get('/', function () {
-            return view('admin.dashboard');
-        })->name('dashboard');
+        // Redirection auto /admin → /admin/dashboard
+        Route::get('/', fn () => redirect()->route('admin.dashboard'))->name('home');
 
+        // Dashboard
+        Route::get('/dashboard', [AdminDashboardController::class, 'index'])
+            ->name('dashboard');
+
+        // CRUD terminaux / halls / gates
         Route::resource('terminals', TerminalController::class);
         Route::resource('halls', HallController::class);
         Route::resource('gates', GateController::class);
     });
 
-/*
-|--------------------------------------------------------------------------
-| Auth (Breeze)
-|--------------------------------------------------------------------------
-*/
-
-Route::middleware(['auth', 'admin'])
-    ->prefix('admin')
-    ->name('admin.')
+// ---------------------------------------------------
+// OPERATOR AREA
+// ---------------------------------------------------
+Route::middleware(['auth', 'operator'])
+    ->prefix('operator')
+    ->name('operator.')
     ->group(function () {
 
-        Route::get('/', [\App\Http\Controllers\AdminDashboardController::class, 'index'])
+        // Dashboard opérateur
+        Route::get('/dashboard', [OperatorController::class, 'dashboard'])
             ->name('dashboard');
 
-        Route::resource('terminals', \App\Http\Controllers\TerminalController::class);
-        Route::resource('halls', \App\Http\Controllers\HallController::class);
-        Route::resource('gates', \App\Http\Controllers\GateController::class);
+        // Changer l’état d’une porte
+        Route::patch('/gates/{gate}/toggle', [OperatorController::class, 'toggleGate'])
+            ->name('gates.toggle');
+
+        // Modifier personnel minimum hall
+        Route::patch('/halls/{hall}/personnel', [OperatorController::class, 'updateHallPersonnel'])
+            ->name('halls.personnel');
     });
-
-
 
 require __DIR__.'/auth.php';
