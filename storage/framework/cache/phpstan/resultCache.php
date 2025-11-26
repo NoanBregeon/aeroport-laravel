@@ -2685,63 +2685,12 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Method App\\Http\\Controllers\\OperatorController::dashboard() has no return type specified.',
        'file' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php',
-       'line' => 12,
+       'line' => 11,
        'canBeIgnored' => true,
        'filePath' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 12,
-       'nodeType' => 'PHPStan\\Node\\InClassMethodNode',
-       'identifier' => 'missingType.return',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    1 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Relation \'halls\' is not found in App\\Models\\Terminal model.',
-       'file' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php',
-       'line' => 15,
-       'canBeIgnored' => true,
-       'filePath' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 15,
-       'nodeType' => 'PhpParser\\Node\\Expr\\StaticCall',
-       'identifier' => 'larastan.relationExistence',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    2 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Method App\\Http\\Controllers\\OperatorController::toggleGate() has no return type specified.',
-       'file' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php',
-       'line' => 19,
-       'canBeIgnored' => true,
-       'filePath' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 19,
-       'nodeType' => 'PHPStan\\Node\\InClassMethodNode',
-       'identifier' => 'missingType.return',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    3 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Method App\\Http\\Controllers\\OperatorController::updateHallPersonnel() has no return type specified.',
-       'file' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php',
-       'line' => 27,
-       'canBeIgnored' => true,
-       'filePath' => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 27,
+       'nodeLine' => 11,
        'nodeType' => 'PHPStan\\Node\\InClassMethodNode',
        'identifier' => 'missingType.return',
        'metadata' => 
@@ -2855,38 +2804,18 @@ return [
        'fixedErrorDiff' => NULL,
     )),
   ),
-  'C:\\code\\aeroport-laravel\\app\\Http\\Middleware\\OperatorMiddleware.php' => 
-  array (
-    0 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Method App\\Http\\Middleware\\OperatorMiddleware::handle() has invalid return type App\\Http\\Middleware\\Response.',
-       'file' => 'C:\\code\\aeroport-laravel\\app\\Http\\Middleware\\OperatorMiddleware.php',
-       'line' => 10,
-       'canBeIgnored' => true,
-       'filePath' => 'C:\\code\\aeroport-laravel\\app\\Http\\Middleware\\OperatorMiddleware.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 10,
-       'nodeType' => 'PHPStan\\Node\\InClassMethodNode',
-       'identifier' => 'class.notFound',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-  ),
   'C:\\code\\aeroport-laravel\\app\\Models\\Gate.php' => 
   array (
     0 => 
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Method App\\Models\\Gate::hall() has no return type specified.',
        'file' => 'C:\\code\\aeroport-laravel\\app\\Models\\Gate.php',
-       'line' => 41,
+       'line' => 43,
        'canBeIgnored' => true,
        'filePath' => 'C:\\code\\aeroport-laravel\\app\\Models\\Gate.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 41,
+       'nodeLine' => 43,
        'nodeType' => 'PHPStan\\Node\\InClassMethodNode',
        'identifier' => 'missingType.return',
        'metadata' => 
@@ -2938,12 +2867,12 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Method App\\Models\\Terminal::halls() has no return type specified.',
        'file' => 'C:\\code\\aeroport-laravel\\app\\Models\\Terminal.php',
-       'line' => 43,
+       'line' => 41,
        'canBeIgnored' => true,
        'filePath' => 'C:\\code\\aeroport-laravel\\app\\Models\\Terminal.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 43,
+       'nodeLine' => 41,
        'nodeType' => 'PHPStan\\Node\\InClassMethodNode',
        'identifier' => 'missingType.return',
        'metadata' => 
@@ -3112,28 +3041,6 @@ return [
       ),
     ),
   ),
-  'C:\\code\\aeroport-laravel\\app\\Http\\Middleware\\AdminMiddleware.php' => 
-  array (
-    'PHPStan\\Rules\\DeadCode\\PossiblyPureFuncCallCollector' => 
-    array (
-      0 => 
-      array (
-        0 => 'abort',
-        1 => 14,
-      ),
-    ),
-  ),
-  'C:\\code\\aeroport-laravel\\app\\Http\\Middleware\\OperatorMiddleware.php' => 
-  array (
-    'PHPStan\\Rules\\DeadCode\\PossiblyPureFuncCallCollector' => 
-    array (
-      0 => 
-      array (
-        0 => 'abort',
-        1 => 13,
-      ),
-    ),
-  ),
   'C:\\code\\aeroport-laravel\\app\\Http\\Requests\\Auth\\LoginRequest.php' => 
   array (
     'Larastan\\Larastan\\Collectors\\UsedTranslationFunctionCollector' => 
@@ -3226,7 +3133,7 @@ return [
 	'dependencies' => array (
   'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\AdminDashboardController.php' => 
   array (
-    'fileHash' => '5c41abe48f351ce3dfa8ffc3396a67a204896de0',
+    'fileHash' => '6744b89c84c122c40e5820a323c5ca2fde841d35',
     'dependentFiles' => 
     array (
     ),
@@ -3332,7 +3239,7 @@ return [
   ),
   'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php' => 
   array (
-    'fileHash' => '622028d27c6223f00cc22a63098d8478c36d5dc7',
+    'fileHash' => 'f1ea1370dee2852fcd7ba05380157db4311696be',
     'dependentFiles' => 
     array (
     ),
@@ -3353,7 +3260,7 @@ return [
   ),
   'C:\\code\\aeroport-laravel\\app\\Http\\Middleware\\AdminMiddleware.php' => 
   array (
-    'fileHash' => '9db0e45aca914b694e4df59e4cb41f5966a22b8e',
+    'fileHash' => 'b566707363e1665a08ccf0fad4ce3766b242f100',
     'dependentFiles' => 
     array (
       0 => 'C:\\code\\aeroport-laravel\\app\\Http\\Kernel.php',
@@ -3361,7 +3268,7 @@ return [
   ),
   'C:\\code\\aeroport-laravel\\app\\Http\\Middleware\\OperatorMiddleware.php' => 
   array (
-    'fileHash' => '8493250eb40a697550480abda1ed227ac5183452',
+    'fileHash' => '8fb9ba7f9e9fc8862ffe4bee6bbf9c6d6816abb8',
     'dependentFiles' => 
     array (
     ),
@@ -3391,7 +3298,7 @@ return [
   ),
   'C:\\code\\aeroport-laravel\\app\\Models\\Gate.php' => 
   array (
-    'fileHash' => '61b0d9b7aeb3a3d6ed602fc10df3b6816e18f16e',
+    'fileHash' => '6f7376c782e365ab93be3eee7003a44a3e96d165',
     'dependentFiles' => 
     array (
       0 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\AdminDashboardController.php',
@@ -3404,7 +3311,7 @@ return [
   ),
   'C:\\code\\aeroport-laravel\\app\\Models\\Hall.php' => 
   array (
-    'fileHash' => '359dc2bab202e274574d9fe8fde23c9ebc4210d4',
+    'fileHash' => '831782cf4cc8498472d563d1a640aee09c88e86c',
     'dependentFiles' => 
     array (
       0 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\AdminDashboardController.php',
@@ -3418,7 +3325,7 @@ return [
   ),
   'C:\\code\\aeroport-laravel\\app\\Models\\Terminal.php' => 
   array (
-    'fileHash' => '3ba236cacb8d57665a5c6e2121cb60576ffe873f',
+    'fileHash' => '2941e5e1958f7084c6fa9ebddc65a00437be10ec',
     'dependentFiles' => 
     array (
       0 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\AdminDashboardController.php',
@@ -3432,7 +3339,7 @@ return [
   ),
   'C:\\code\\aeroport-laravel\\app\\Models\\User.php' => 
   array (
-    'fileHash' => '858f6fbf1486658c3b1e844ad341c28a9c4db3d9',
+    'fileHash' => 'd5e7f529895344861c8dba8577246a30205fd15e',
     'dependentFiles' => 
     array (
       0 => 'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\Auth\\AuthenticatedSessionController.php',
@@ -4863,75 +4770,6 @@ return [
           array (
           ),
         )),
-        1 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'toggleGate',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => NULL,
-           'parameters' => 
-          array (
-            0 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'gate',
-               'type' => 'App\\Models\\Gate',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => false,
-               'attributes' => 
-              array (
-              ),
-            )),
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        2 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'updateHallPersonnel',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => NULL,
-           'parameters' => 
-          array (
-            0 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'request',
-               'type' => 'Illuminate\\Http\\Request',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => false,
-               'attributes' => 
-              array (
-              ),
-            )),
-            1 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'hall',
-               'type' => 'App\\Models\\Hall',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => false,
-               'attributes' => 
-              array (
-              ),
-            )),
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
       ),
        'attributes' => 
       array (
@@ -5390,7 +5228,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => 'App\\Http\\Middleware\\Response',
+           'returnType' => 'Symfony\\Component\\HttpFoundation\\Response',
            'parameters' => 
           array (
             0 => 
@@ -5793,8 +5631,9 @@ return [
          'phpDocString' => '/**
  * @property int $id
  * @property int $hall_id
- * @property string $numero
- * @property string $status
+ * @property string $nom
+ * @property bool $is_open
+ * @property int $capacite_max
  * @property \\Illuminate\\Support\\Carbon|null $created_at
  * @property \\Illuminate\\Support\\Carbon|null $updated_at
  * @property-read \\App\\Models\\Hall|null $hall
@@ -5802,11 +5641,12 @@ return [
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Gate newModelQuery()
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Gate newQuery()
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Gate query()
+ * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Gate whereCapaciteMax($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Gate whereCreatedAt($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Gate whereHallId($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Gate whereId($value)
- * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Gate whereNumero($value)
- * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Gate whereStatus($value)
+ * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Gate whereIsOpen($value)
+ * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Gate whereNom($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Gate whereUpdatedAt($value)
  *
  * @mixin \\Eloquent
@@ -5919,7 +5759,7 @@ return [
  * @property int $id
  * @property int $terminal_id
  * @property string $nom
- * @property string|null $type
+ * @property int $min_personnel
  * @property \\Illuminate\\Support\\Carbon|null $created_at
  * @property \\Illuminate\\Support\\Carbon|null $updated_at
  * @property-read \\Illuminate\\Database\\Eloquent\\Collection<int, \\App\\Models\\Gate> $gates
@@ -5931,9 +5771,9 @@ return [
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Hall query()
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Hall whereCreatedAt($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Hall whereId($value)
+ * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Hall whereMinPersonnel($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Hall whereNom($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Hall whereTerminalId($value)
- * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Hall whereType($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Hall whereUpdatedAt($value)
  *
  * @mixin \\Eloquent
@@ -6038,9 +5878,8 @@ return [
          'phpDocString' => '/**
  * @property int $id
  * @property string $nom
- * @property string $code
- * @property string|null $emplacement
- * @property \\Illuminate\\Support\\Carbon|null $date_mise_en_service
+ * @property string $emplacement
+ * @property \\Illuminate\\Support\\Carbon $date_mise_en_service
  * @property \\Illuminate\\Support\\Carbon|null $created_at
  * @property \\Illuminate\\Support\\Carbon|null $updated_at
  * @property-read \\Illuminate\\Database\\Eloquent\\Collection<int, \\App\\Models\\Hall> $halls
@@ -6049,7 +5888,6 @@ return [
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Terminal newModelQuery()
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Terminal newQuery()
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Terminal query()
- * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Terminal whereCode($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Terminal whereCreatedAt($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Terminal whereDateMiseEnService($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Terminal whereEmplacement($value)
@@ -6173,6 +6011,7 @@ return [
  * @property \\Illuminate\\Support\\Carbon|null $created_at
  * @property \\Illuminate\\Support\\Carbon|null $updated_at
  * @property int $is_admin
+ * @property int $is_operator
  * @property-read \\Illuminate\\Notifications\\DatabaseNotificationCollection<int, \\Illuminate\\Notifications\\DatabaseNotification> $notifications
  * @property-read int|null $notifications_count
  *
@@ -6185,6 +6024,7 @@ return [
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|User whereEmailVerifiedAt($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|User whereId($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|User whereIsAdmin($value)
+ * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|User whereIsOperator($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|User whereName($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|User wherePassword($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|User whereRememberToken($value)

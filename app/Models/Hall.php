@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $id
  * @property int $terminal_id
  * @property string $nom
- * @property string|null $type
+ * @property int $min_personnel
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Gate> $gates
@@ -20,9 +20,9 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Hall query()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Hall whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Hall whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Hall whereMinPersonnel($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Hall whereNom($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Hall whereTerminalId($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Hall whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Hall whereUpdatedAt($value)
  *
  * @mixin \Eloquent

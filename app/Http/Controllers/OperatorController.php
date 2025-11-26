@@ -1,22 +1,19 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace App\Http\Controllers;
 
+use App\Models\Gate;
+use App\Models\Hall;
+use App\Models\Terminal;
 
-use Closure;
-use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Response;
-
-class OperatorMiddleware
+class OperatorController extends Controller
 {
-    public function handle(Request $request, Closure $next): Response
+    public function dashboard()
     {
-        // Si l'utilisateur est admin → il a accès aussi
-        if (auth()->check() && auth()->user()->is_operator) {
-            return $next($request);
-        }
-
-        // Sinon on renvoie vers la page d'accueil
-        return redirect()->route('dashboard')->with('error', 'Accès réservé aux opérateurs.');
+        return view('operator.dashboard', [
+            'terminals' => Terminal::all(),
+            'halls' => Hall::all(),
+            'gates' => Gate::all(),
+        ]);
     }
 }

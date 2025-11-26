@@ -7,7 +7,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
   array (
     'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\AdminDashboardController.php' => 
     array (
-      0 => '5c41abe48f351ce3dfa8ffc3396a67a204896de0',
+      0 => '6744b89c84c122c40e5820a323c5ca2fde841d35',
       1 => 
       array (
         0 => 'app\\http\\controllers\\admindashboardcontroller',
@@ -254,7 +254,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\code\\aeroport-laravel\\app\\Http\\Middleware\\AdminMiddleware.php' => 
     array (
-      0 => '9db0e45aca914b694e4df59e4cb41f5966a22b8e',
+      0 => 'b566707363e1665a08ccf0fad4ce3766b242f100',
       1 => 
       array (
         0 => 'app\\http\\middleware\\adminmiddleware',
@@ -303,7 +303,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\code\\aeroport-laravel\\app\\Models\\Gate.php' => 
     array (
-      0 => '61b0d9b7aeb3a3d6ed602fc10df3b6816e18f16e',
+      0 => '6f7376c782e365ab93be3eee7003a44a3e96d165',
       1 => 
       array (
         0 => 'app\\models\\gate',
@@ -318,7 +318,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\code\\aeroport-laravel\\app\\Models\\Hall.php' => 
     array (
-      0 => '359dc2bab202e274574d9fe8fde23c9ebc4210d4',
+      0 => '831782cf4cc8498472d563d1a640aee09c88e86c',
       1 => 
       array (
         0 => 'app\\models\\hall',
@@ -334,7 +334,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\code\\aeroport-laravel\\app\\Models\\Terminal.php' => 
     array (
-      0 => '3ba236cacb8d57665a5c6e2121cb60576ffe873f',
+      0 => '2941e5e1958f7084c6fa9ebddc65a00437be10ec',
       1 => 
       array (
         0 => 'app\\models\\terminal',
@@ -349,7 +349,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\code\\aeroport-laravel\\app\\Models\\User.php' => 
     array (
-      0 => '858f6fbf1486658c3b1e844ad341c28a9c4db3d9',
+      0 => 'd5e7f529895344861c8dba8577246a30205fd15e',
       1 => 
       array (
         0 => 'app\\models\\user',
@@ -411,7 +411,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\code\\aeroport-laravel\\app\\Http\\Controllers\\OperatorController.php' => 
     array (
-      0 => '622028d27c6223f00cc22a63098d8478c36d5dc7',
+      0 => 'f1ea1370dee2852fcd7ba05380157db4311696be',
       1 => 
       array (
         0 => 'app\\http\\controllers\\operatorcontroller',
@@ -419,8 +419,6 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       2 => 
       array (
         0 => 'app\\http\\controllers\\dashboard',
-        1 => 'app\\http\\controllers\\togglegate',
-        2 => 'app\\http\\controllers\\updatehallpersonnel',
       ),
       3 => 
       array (
@@ -428,7 +426,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\code\\aeroport-laravel\\app\\Http\\Middleware\\OperatorMiddleware.php' => 
     array (
-      0 => '8493250eb40a697550480abda1ed227ac5183452',
+      0 => '8fb9ba7f9e9fc8862ffe4bee6bbf9c6d6816abb8',
       1 => 
       array (
         0 => 'app\\http\\middleware\\operatormiddleware',

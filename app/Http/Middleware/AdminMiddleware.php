@@ -10,10 +10,11 @@ class AdminMiddleware
 {
     public function handle(Request $request, Closure $next): Response
     {
-        if (! auth()->check() || auth()->user()->is_admin !== 1) {
-            abort(403, 'Accès réservé aux administrateurs.');
+        if (auth()->check() && auth()->user()->is_admin) {
+            return $next($request);
         }
 
-        return $next($request);
+        return redirect()->route('dashboard')
+            ->with('error', 'Accès réservé aux administrateurs.');
     }
 }

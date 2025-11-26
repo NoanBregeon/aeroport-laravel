@@ -160,7 +160,7 @@
     <tr class=" d-flex"><td  class="col-1 text-end"><a id="8" href="#8">8</a></td><td class="col-11 codeLine"><span class="comment">&nbsp;*&nbsp;@property&nbsp;int&nbsp;$id</span></td></tr>
     <tr class=" d-flex"><td  class="col-1 text-end"><a id="9" href="#9">9</a></td><td class="col-11 codeLine"><span class="comment">&nbsp;*&nbsp;@property&nbsp;int&nbsp;$terminal_id</span></td></tr>
     <tr class=" d-flex"><td  class="col-1 text-end"><a id="10" href="#10">10</a></td><td class="col-11 codeLine"><span class="comment">&nbsp;*&nbsp;@property&nbsp;string&nbsp;$nom</span></td></tr>
-    <tr class=" d-flex"><td  class="col-1 text-end"><a id="11" href="#11">11</a></td><td class="col-11 codeLine"><span class="comment">&nbsp;*&nbsp;@property&nbsp;string|null&nbsp;$type</span></td></tr>
+    <tr class=" d-flex"><td  class="col-1 text-end"><a id="11" href="#11">11</a></td><td class="col-11 codeLine"><span class="comment">&nbsp;*&nbsp;@property&nbsp;int&nbsp;$min_personnel</span></td></tr>
     <tr class=" d-flex"><td  class="col-1 text-end"><a id="12" href="#12">12</a></td><td class="col-11 codeLine"><span class="comment">&nbsp;*&nbsp;@property&nbsp;\Illuminate\Support\Carbon|null&nbsp;$created_at</span></td></tr>
     <tr class=" d-flex"><td  class="col-1 text-end"><a id="13" href="#13">13</a></td><td class="col-11 codeLine"><span class="comment">&nbsp;*&nbsp;@property&nbsp;\Illuminate\Support\Carbon|null&nbsp;$updated_at</span></td></tr>
     <tr class=" d-flex"><td  class="col-1 text-end"><a id="14" href="#14">14</a></td><td class="col-11 codeLine"><span class="comment">&nbsp;*&nbsp;@property-read&nbsp;\Illuminate\Database\Eloquent\Collection&lt;int,&nbsp;\App\Models\Gate&gt;&nbsp;$gates</span></td></tr>
@@ -172,9 +172,9 @@
     <tr class=" d-flex"><td  class="col-1 text-end"><a id="20" href="#20">20</a></td><td class="col-11 codeLine"><span class="comment">&nbsp;*&nbsp;@method&nbsp;static&nbsp;\Illuminate\Database\Eloquent\Builder&lt;static&gt;|Hall&nbsp;query()</span></td></tr>
     <tr class=" d-flex"><td  class="col-1 text-end"><a id="21" href="#21">21</a></td><td class="col-11 codeLine"><span class="comment">&nbsp;*&nbsp;@method&nbsp;static&nbsp;\Illuminate\Database\Eloquent\Builder&lt;static&gt;|Hall&nbsp;whereCreatedAt($value)</span></td></tr>
     <tr class=" d-flex"><td  class="col-1 text-end"><a id="22" href="#22">22</a></td><td class="col-11 codeLine"><span class="comment">&nbsp;*&nbsp;@method&nbsp;static&nbsp;\Illuminate\Database\Eloquent\Builder&lt;static&gt;|Hall&nbsp;whereId($value)</span></td></tr>
-    <tr class=" d-flex"><td  class="col-1 text-end"><a id="23" href="#23">23</a></td><td class="col-11 codeLine"><span class="comment">&nbsp;*&nbsp;@method&nbsp;static&nbsp;\Illuminate\Database\Eloquent\Builder&lt;static&gt;|Hall&nbsp;whereNom($value)</span></td></tr>
-    <tr class=" d-flex"><td  class="col-1 text-end"><a id="24" href="#24">24</a></td><td class="col-11 codeLine"><span class="comment">&nbsp;*&nbsp;@method&nbsp;static&nbsp;\Illuminate\Database\Eloquent\Builder&lt;static&gt;|Hall&nbsp;whereTerminalId($value)</span></td></tr>
-    <tr class=" d-flex"><td  class="col-1 text-end"><a id="25" href="#25">25</a></td><td class="col-11 codeLine"><span class="comment">&nbsp;*&nbsp;@method&nbsp;static&nbsp;\Illuminate\Database\Eloquent\Builder&lt;static&gt;|Hall&nbsp;whereType($value)</span></td></tr>
+    <tr class=" d-flex"><td  class="col-1 text-end"><a id="23" href="#23">23</a></td><td class="col-11 codeLine"><span class="comment">&nbsp;*&nbsp;@method&nbsp;static&nbsp;\Illuminate\Database\Eloquent\Builder&lt;static&gt;|Hall&nbsp;whereMinPersonnel($value)</span></td></tr>
+    <tr class=" d-flex"><td  class="col-1 text-end"><a id="24" href="#24">24</a></td><td class="col-11 codeLine"><span class="comment">&nbsp;*&nbsp;@method&nbsp;static&nbsp;\Illuminate\Database\Eloquent\Builder&lt;static&gt;|Hall&nbsp;whereNom($value)</span></td></tr>
+    <tr class=" d-flex"><td  class="col-1 text-end"><a id="25" href="#25">25</a></td><td class="col-11 codeLine"><span class="comment">&nbsp;*&nbsp;@method&nbsp;static&nbsp;\Illuminate\Database\Eloquent\Builder&lt;static&gt;|Hall&nbsp;whereTerminalId($value)</span></td></tr>
     <tr class=" d-flex"><td  class="col-1 text-end"><a id="26" href="#26">26</a></td><td class="col-11 codeLine"><span class="comment">&nbsp;*&nbsp;@method&nbsp;static&nbsp;\Illuminate\Database\Eloquent\Builder&lt;static&gt;|Hall&nbsp;whereUpdatedAt($value)</span></td></tr>
     <tr class=" d-flex"><td  class="col-1 text-end"><a id="27" href="#27">27</a></td><td class="col-11 codeLine"><span class="comment">&nbsp;*</span></td></tr>
     <tr class=" d-flex"><td  class="col-1 text-end"><a id="28" href="#28">28</a></td><td class="col-11 codeLine"><span class="comment">&nbsp;*&nbsp;@mixin&nbsp;\Eloquent</span></td></tr>
@@ -207,7 +207,7 @@
     <h4>Legend</h4>
     <p><span class="legend covered-by-small-tests">Covered by small (and larger) tests</span><span class="legend covered-by-medium-tests">Covered by medium (and large) tests</span><span class="legend covered-by-large-tests">Covered by large tests (and tests of unknown size)</span><span class="legend not-covered">Not covered</span><span class="legend not-coverable">Not coverable</span></p>
     <p>
-     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 11.0.11</a> using <a href="https://www.php.net/" target="_top">PHP 8.4.15</a> and <a href="https://phpunit.de/">PHPUnit 11.5.44</a> at Wed Nov 26 11:25:48 UTC 2025.</small>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 11.0.11</a> using <a href="https://www.php.net/" target="_top">PHP 8.4.15</a> and <a href="https://phpunit.de/">PHPUnit 11.5.44</a> at Wed Nov 26 12:36:21 UTC 2025.</small>
     </p>
     <a title="Back to the top" id="toplink" href="#">
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M12 11L6 5l-6 6h12z"/></svg>

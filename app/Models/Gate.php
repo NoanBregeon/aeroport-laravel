@@ -7,8 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * @property int $id
  * @property int $hall_id
- * @property string $numero
- * @property string $status
+ * @property string $nom
+ * @property bool $is_open
+ * @property int $capacite_max
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Hall|null $hall
@@ -16,11 +17,12 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate whereCapaciteMax($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate whereHallId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate whereNumero($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate whereIsOpen($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate whereNom($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Gate whereUpdatedAt($value)
  *
  * @mixin \Eloquent

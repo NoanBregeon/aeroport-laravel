@@ -21,17 +21,27 @@ Route::get('/', function () {
 // Dashboard utilisateur connecté
 // ---------------------------------------------------
 Route::get('/dashboard', function () {
-    $user = auth()->user();
 
-    if (! $user) {
+    // Pas connecté → Jetstream s’occupe d'envoyer vers login
+    if (! auth()->check()) {
         return redirect()->route('login');
     }
 
-    return $user->is_admin
-        ? redirect()->route('admin.dashboard')
-        : redirect()->route('operator.dashboard');
+    $user = auth()->user();
 
-})->middleware(['auth'])->name('dashboard');
+    // Admin
+    if ($user->is_admin) {
+        return redirect()->route('admin.dashboard');
+    }
+
+    // Operator
+    if ($user->is_operator) {
+        return redirect()->route('operator.dashboard');
+    }
+
+    // Aucun rôle valide
+    abort(403);
+})->name('dashboard');
 
 // ---------------------------------------------------
 // Switch de langue
