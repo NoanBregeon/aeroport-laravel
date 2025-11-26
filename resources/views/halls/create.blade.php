@@ -1,1 +1,0 @@
-@extends('layouts.app') @section('content')<form method='POST'>@csrf<input name='nom'/></form>@endsection
