@@ -1,4 +1,11 @@
 <?php return array (
+  'barryvdh/laravel-ide-helper' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider',
+    ),
+  ),
   'laravel/breeze' => 
   array (
     'providers' => 
@@ -39,6 +46,13 @@
     'providers' => 
     array (
       0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
+    ),
+  ),
+  'nunomaduro/phpinsights' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'NunoMaduro\\PhpInsights\\Application\\Adapters\\Laravel\\InsightsServiceProvider',
     ),
   ),
   'nunomaduro/termwind' => 
